@@ -35,6 +35,8 @@ class SimpleBlockParser {
             case 'http':
                 providerIns = new Web3.providers.HttpProvider(uri)
                 break;
+            case 'ipc':
+                providerIns = new Web3.provider.IpcProvider(uri)
             default:
                 throw new Error('Unknow provider', provider)
                 break;
